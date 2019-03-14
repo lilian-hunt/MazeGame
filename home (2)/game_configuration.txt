@@ -1,0 +1,3 @@
+<number of lives> <number of steps> <amount of gold> <number of rows on the board>
+<BOARD>
+
