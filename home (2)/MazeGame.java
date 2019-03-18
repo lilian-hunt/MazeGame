@@ -5,12 +5,8 @@ import java.io.PrintWriter;
 /**
  * Maze Game
  *
- * INFO1113 Assignment 1
- * 2018 Semester 2
- *
  * The Maze Game.
- * In this assignment you will be designing a maze game.
- * You will have a maze board and a player moving around the board.
+ * There is a maze board and a player moving around the board.
  * The player can step left, right, up or down.
  * However, you need to complete the maze within a given number of steps.
  *
@@ -18,23 +14,9 @@ import java.io.PrintWriter;
  * move through a wall, you lose a life. You have a limited number of lives.
  * There is also gold on the board that you can collect if you move ontop of it.
  *
- * Please implement the methods provided, as some of the marks are allocated to
- * testing these methods directly.
- *
- * @author YOU :)
- * @date 23 August 2018
- *
  */
 public class MazeGame {
-    /* You can put variables that you need throughout the class up here.
-     * You MUST INITIALISE ALL of these class variables in your initialiseGame
-     * method.
-     */
-
-    // A sample variable to show you can put variables here.
-    // You would initialise it in initialiseGame method.
-    // e.g. Have the following line in the initialiseGame method.
-    // sampleVariable = 1;
+  
 	static int numLives, numSteps, amountGold, numRows;
 	static int xPos;
 	static int yPos;
@@ -47,14 +29,8 @@ public class MazeGame {
      * This includes the number of lives, the number of steps, the starting gold
      * and the board.
      *
-     * If the configuration file name is "DEFAULT", load the default
+     * If the configuration file name is "DEFAULT", it loads the default
      * game configuration.
-     *
-     * NOTE: Please also initialise all of your class variables.
-     *
-     * @args configFileName The name of the game configuration file to read from.
-     * @throws IOException If there was an error reading in the game.
-     *         For example, if the input file could not be found.
      */
     public static void initialiseGame(String configFileName) throws IOException {
 		if (configFileName.equals("DEFAULT")) {
@@ -125,9 +101,6 @@ public class MazeGame {
      *
      * <number of lives> <number of steps> <amount of gold> <number of rows on the board>
      * <BOARD>
-     *
-     * @args toFileName The name of the file to save the game configuration to.
-     * @throws IOException If there was an error writing the game to the file.
      */
     public static void saveGame(String toFileName) throws IOException {
         PrintWriter p = new PrintWriter(toFileName);
